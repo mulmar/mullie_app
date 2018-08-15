@@ -1,0 +1,24 @@
+<div class="container">
+<div class="row">
+	<div class="offset-md-2 col-md-6">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"> tweet van: <%= link_to @tweet.user.username, user_path(@tweet.user.username) %></h5>
+    <p class="card-text">"<%= @tweet.content %>"</p>
+    <% if @tweet.image.present? %>
+     <p class="card-text"><%= image_tag @tweet.image.url, class: "img-fluid" %></p>
+     <% end %>
+    <% if @tweet.user == current_user %>
+    <%= link_to 'wijzig', edit_tweet_path(@tweet), class: "card-link" %> | 
+    <%= link_to 'verwijder', tweet_path, method: :delete, data: { confirm: 'Are you sure?' } %> | 
+    <% end %>
+
+  <p class="card-text">populariteit: <%= @tweet.votes_for.up.size %> 
+       </p>
+
+    <%= link_to 'terug naar alle tweets', tweets_path, class: "card-link" %>
+  </div>
+</div>
+</div>
+</div>
+</div>

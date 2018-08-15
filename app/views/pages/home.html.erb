@@ -1,0 +1,31 @@
+<div class="jumbotron jumbotron-home">
+    <div class="container">
+    <%  if user_signed_in? %>
+        <h1>Welcome back!</h1>
+        <% else %>
+        <h1>Welcome</h1>
+        <% end %>
+    <p>Welkom op de mullie_app site. Deze site is altijd 'under construction', omdat ik deze voor test doeleinden gebruik.</p>
+    <%= link_to "naar admin", admin_root_path, class: "btn btn-primary" %>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Verschillende onderdelen</h2>
+            <p>In deze app zal ik allerlei oefening apps publiceren om zo mijn testjes direct te kunnen uitproberen </p>
+            <p><%= link_to "View details", "#", class: "btn btn-secondary" %></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Mij tweet app</h2>
+            <p>De eerste app die ik gemaakt heb is de tweet app. Hierin kunnen personen inloggen en tweets maken. Ook volgen en stemmen zullen onderdeel worden van deze app</p>
+            <p> <%= link_to "naar Tweets", tweets_path, class: "btn btn-secondary" %></p>
+
+        </div>
+        <div class="col-md-4">
+            <h2>Ruby</h2>
+            <p>Is voor mij een geheel nieuwe taal, waar ik meer van wil weten.</p>
+            <p><%= link_to "View details", "#", class: "btn btn-secondary" %></p>
+        </div>
+    </div>
+</div>
