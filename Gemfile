@@ -19,6 +19,7 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 gem 'acts_as_votable', '~> 0.11.1'
 gem "paperclip", "~> 6.0.0"
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do
@@ -40,7 +41,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.19'
+  gem 'pg', '~> 0.18'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
