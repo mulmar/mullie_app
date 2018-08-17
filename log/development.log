@@ -25329,3 +25329,994 @@ Processing by Admin::UsersController#index as HTML
 Completed 200 OK in 159ms (Views: 154.9ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-16 20:50:56 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:3
+  Rendered pages/home.html.erb within layouts/application (27.4ms)
+  Rendered pages/_navbar.html.erb (1.2ms)
+Completed 200 OK in 8477ms (Views: 8455.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-08-16 20:51:07 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (251.6ms)
+Completed 200 OK in 268ms (Views: 257.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-08-16 20:51:08 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (108.9ms)
+Completed 200 OK in 116ms (Views: 113.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2018-08-16 20:51:12 +0200
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:13
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb (117.9ms)
+Completed 200 OK in 134ms (Views: 130.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-08-16 20:51:17 +0200
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mFollow Load (0.2ms)[0m  [1m[34mSELECT "follows".* FROM "follows"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE Follow Load (0.0ms)[0m  [1m[34mSELECT "follows".* FROM "follows"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mActsAsVotable::Vote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (243.8ms)
+Completed 200 OK in 261ms (Views: 252.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin/tweets" for 127.0.0.1 at 2018-08-16 20:51:22 +0200
+Processing by Admin::TweetsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tweets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tweets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tweets"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tweets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mActsAsVotable::Vote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (149.6ms)
+Completed 200 OK in 164ms (Views: 159.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-08-16 20:51:26 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (87.6ms)
+Completed 200 OK in 96ms (Views: 91.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-08-16 20:51:33 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (85.1ms)
+Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/tweets" for 127.0.0.1 at 2018-08-16 20:51:36 +0200
+Processing by Admin::TweetsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tweets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tweets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tweets"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tweets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mActsAsVotable::Vote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (140.1ms)
+Completed 200 OK in 155ms (Views: 151.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-08-16 20:51:38 +0200
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mFollow Load (0.2ms)[0m  [1m[34mSELECT "follows".* FROM "follows"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE Follow Load (0.0ms)[0m  [1m[34mSELECT "follows".* FROM "follows"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mActsAsVotable::Vote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (138.9ms)
+Completed 200 OK in 153ms (Views: 149.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/tweets" for 127.0.0.1 at 2018-08-16 20:51:40 +0200
+Processing by Admin::TweetsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tweets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tweets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tweets"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tweets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  [1m[36mActsAsVotable::Vote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes"[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/inherited_resources-44276af84e66/lib/inherited_resources/actions.rb:7
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (149.7ms)
+Completed 200 OK in 163ms (Views: 159.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-08-16 20:51:40 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (79.9ms)
+Completed 200 OK in 87ms (Views: 84.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-08-16 20:51:43 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/martin/.rvm/gems/ruby-2.5.1/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (79.5ms)
+Completed 200 OK in 86ms (Views: 83.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-08-16 20:51:47 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pSmahpWuODV7MpsXF4zCWfGA1kWCn3/vkV2BeHq7Cj5DCYiVtchDrlgN915FhPuv+Sg85rJpbNzO8hjeiDb9Zw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-16 20:51:47 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (5.9ms)
+  Rendered pages/_navbar.html.erb (0.9ms)
+Completed 200 OK in 157ms (Views: 155.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2018-08-16 20:51:51 +0200
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 5], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  Rendered tweets/index.html.erb within layouts/application (27.5ms)
+  Rendered pages/_navbar.html.erb (0.9ms)
+Completed 200 OK in 191ms (Views: 182.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2018-08-16 20:51:56 +0200
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 5], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:31
+  Rendered tweets/index.html.erb within layouts/application (31.7ms)
+  Rendered pages/_navbar.html.erb (0.8ms)
+Completed 200 OK in 172ms (Views: 164.1ms | ActiveRecord: 3.0ms)
+
+
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3776449098692534355)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180804045200)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180804045200_devise_create_users.rb:5
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180804045200_devise_create_users.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180804045200_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180804045200"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateActiveAdminComments (20180805135653)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" bigserial primary key, "namespace" character varying, "body" text, "resource_type" character varying, "resource_id" bigint, "author_type" character varying, "author_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180805135653_create_active_admin_comments.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments"  ("resource_type", "resource_id")[0m
+  ↳ db/migrate/20180805135653_create_active_admin_comments.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments"  ("author_type", "author_id")[0m
+  ↳ db/migrate/20180805135653_create_active_admin_comments.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_namespace" ON "active_admin_comments"  ("namespace")[0m
+  ↳ db/migrate/20180805135653_create_active_admin_comments.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180805135653"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddAdminToUsers (20180805191918)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT FALSE[0m
+  ↳ db/migrate/20180805191918_add_admin_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180805191918"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateTweets (20180809085540)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "user_id" bigint, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_003928b7f5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20180809085540_create_tweets.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_tweets_on_user_id" ON "tweets"  ("user_id")[0m
+  ↳ db/migrate/20180809085540_create_tweets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180809085540"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddUsernameAndNameToUsers (20180813190747)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "username" character varying[0m
+  ↳ db/migrate/20180813190747_add_username_and_name_to_users.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20180813190747_add_username_and_name_to_users.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  ↳ db/migrate/20180813190747_add_username_and_name_to_users.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180813190747"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to ActsAsFollowerMigration (20180814065144)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows"[0m
+  ↳ db/migrate/20180814065144_acts_as_follower_migration.rb:3
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "followable_type" character varying NOT NULL, "followable_id" bigint NOT NULL, "follower_type" character varying NOT NULL, "follower_id" bigint NOT NULL, "blocked" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180814065144_acts_as_follower_migration.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_followable_type_and_followable_id" ON "follows"  ("followable_type", "followable_id")[0m
+  ↳ db/migrate/20180814065144_acts_as_follower_migration.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_follower_type_and_follower_id" ON "follows"  ("follower_type", "follower_id")[0m
+  ↳ db/migrate/20180814065144_acts_as_follower_migration.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "fk_follows" ON "follows"  ("follower_id", "follower_type")[0m
+  ↳ db/migrate/20180814065144_acts_as_follower_migration.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "fk_followables" ON "follows"  ("followable_id", "followable_type")[0m
+  ↳ db/migrate/20180814065144_acts_as_follower_migration.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180814065144"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to ActsAsVotableMigration (20180815095511)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "votes" ("id" serial NOT NULL PRIMARY KEY, "votable_type" character varying, "votable_id" integer, "voter_type" character varying, "voter_id" integer, "vote_flag" boolean, "vote_scope" character varying, "vote_weight" integer, "created_at" timestamp, "updated_at" timestamp)[0m
+  ↳ db/migrate/20180815095511_acts_as_votable_migration.rb:3
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_votes_on_voter_id_and_voter_type_and_vote_scope" ON "votes"  ("voter_id", "voter_type", "vote_scope")[0m
+  ↳ db/migrate/20180815095511_acts_as_votable_migration.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_votes_on_votable_id_and_votable_type_and_vote_scope" ON "votes"  ("votable_id", "votable_type", "vote_scope")[0m
+  ↳ db/migrate/20180815095511_acts_as_votable_migration.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180815095511"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddAttachmentImageToTweets (20180815133454)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "tweets" ADD "image_file_name" character varying[0m
+  ↳ db/migrate/20180815133454_add_attachment_image_to_tweets.rb:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "tweets" ADD "image_content_type" character varying[0m
+  ↳ db/migrate/20180815133454_add_attachment_image_to_tweets.rb:4
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "tweets" ADD "image_file_size" integer[0m
+  ↳ db/migrate/20180815133454_add_attachment_image_to_tweets.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "tweets" ADD "image_updated_at" timestamp[0m
+  ↳ db/migrate/20180815133454_add_attachment_image_to_tweets.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180815133454"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-08-17 18:46:52.942622"], ["updated_at", "2018-08-17 18:46:52.942622"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3776449098692534355)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/posts/1" for 127.0.0.1 at 2018-08-17 20:47:30 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/posts/1"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/post" for 127.0.0.1 at 2018-08-17 20:47:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/post"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-17 20:47:36 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.6ms)
+Started GET "/" for 127.0.0.1 at 2018-08-17 20:47:37 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  Rendered pages/_navbar.html.erb (1.4ms)
+  Rendered pages/_navbar.html.erb (1.2ms)
+Completed 200 OK in 502ms (Views: 495.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1094ms (Views: 1088.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2018-08-17 20:47:40 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.9ms)
+  Rendered pages/_navbar.html.erb (1.7ms)
+Completed 200 OK in 214ms (Views: 191.9ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-08-17 20:47:46 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NFzCTERjADPbLmQ67sQZdeICsZW7yYPIupgKsOT9bzK+nwLxxA8PKc5B0pOs2YM20wdmOzQHiYwMhO+0p7hPfA==", "user"=>{"email"=>"martinmulder@me.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "martinmulder@me.com"], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 7ms (ActiveRecord: 2.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NFzCTERjADPbLmQ67sQZdeICsZW7yYPIupgKsOT9bzK+nwLxxA8PKc5B0pOs2YM20wdmOzQHiYwMhO+0p7hPfA==", "user"=>{"email"=>"martinmulder@me.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+  Rendered pages/_navbar.html.erb (1.2ms)
+Completed 200 OK in 273ms (Views: 136.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-17 20:47:51 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.3ms)
+  Rendered pages/_navbar.html.erb (1.0ms)
+Completed 200 OK in 171ms (Views: 169.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-17 20:48:18 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/DBiN31uPiqK4WK4s6fm5hkV89ZN39f0XsnSqhwZXQtS990DPfh1D9M1X5Nv86v4NUwZqptjApHw4rdgWM0u8A==", "user"=>{"email"=>"martinmulder@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"mulmar", "name"=>"Martin Mulder"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "martinmulder@me.com"], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mulmar"], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "martinmulder@me.com"], ["encrypted_password", "$2a$11$F3p7tS/WaVhEVqi.8jU8uOmBfK34DWrkZo8u8.Qlav6vrHUzs4Fxe"], ["created_at", "2018-08-17 18:48:18.732957"], ["updated_at", "2018-08-17 18:48:18.732957"], ["username", "mulmar"], ["name", "Martin Mulder"]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-08-17 18:48:18.736639"], ["last_sign_in_at", "2018-08-17 18:48:18.736639"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-08-17 18:48:18.737439"], ["id", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 163ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 20:48:18 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:3
+  Rendered pages/home.html.erb within layouts/application (4.1ms)
+  Rendered pages/_navbar.html.erb (0.8ms)
+Completed 200 OK in 126ms (Views: 122.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-08-17 20:48:27 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 20:48:27 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:3
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+  Rendered pages/_navbar.html.erb (0.7ms)
+Completed 200 OK in 154ms (Views: 151.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2018-08-17 20:48:38 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KlMIX2q4Y5VJaVy38l3DLAOodBjq0WbLCQ/iAwVKDZ8395gv9RI4ssmyQCglb3nn8qOAay6K/ZiXw4ndEBT6rQ=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 20:48:38 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered pages/_navbar.html.erb (0.8ms)
+Completed 200 OK in 134ms (Views: 131.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-17 20:48:40 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+  Rendered pages/_navbar.html.erb (1.0ms)
+Completed 200 OK in 190ms (Views: 186.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-17 20:49:02 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qs5qrSNjKKYVZvEHGpopre7SyvDxtU40V4JWzgLmiJ3bp4rwBcrVsaJnnXIUClmcO2ELuHpHW3CtM2tQm5RHLQ==", "user"=>{"email"=>"martinmulder.nl@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"mullie-gmail", "name"=>"Martin"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "martinmulder.nl@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mullie-gmail"], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "martinmulder.nl@gmail.com"], ["encrypted_password", "$2a$11$YOUwwVU6R8RcRDtB593ZX.X/kcZFoqBGCxivPkVa5GwMDZKoj0GKO"], ["created_at", "2018-08-17 18:49:03.003910"], ["updated_at", "2018-08-17 18:49:03.003910"], ["username", "mullie-gmail"], ["name", "Martin"]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-08-17 18:49:03.007140"], ["last_sign_in_at", "2018-08-17 18:49:03.007140"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-08-17 18:49:03.009213"], ["id", 2]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 209ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 20:49:03 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:3
+  Rendered pages/home.html.erb within layouts/application (2.4ms)
+  Rendered pages/_navbar.html.erb (0.9ms)
+Completed 200 OK in 186ms (Views: 182.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2018-08-17 20:49:05 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vv/Lia2outU1AgkadGETLh2Ij+cNiwh8XnmF6MP6m//yVQ5axfYR3+bjB+YUFSLczH+zmI7Pgw++ihGBoYLIew=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 20:49:05 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered pages/_navbar.html.erb (0.8ms)
+Completed 200 OK in 124ms (Views: 119.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-08-17 20:49:09 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+  Rendered pages/_navbar.html.erb (0.8ms)
+Completed 200 OK in 195ms (Views: 193.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-08-17 20:49:31 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FxA9kg0iQWO45XjviEXZFrY3viMpimf1UiMtQQYyI4eE+oIaTVLKbEPJqcqdvxHU9dbaZIJ473fk5nmahblQsA==", "user"=>{"email"=>"testuser@testing123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"tester", "name"=>"test user"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testuser@testing123.com"], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tester"], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "testuser@testing123.com"], ["encrypted_password", "$2a$11$aj.0fnT1mw3sMgM1nA6k/Ox/IadZOvBbrQUE7tK3Kyw8gJz3Xc3Im"], ["created_at", "2018-08-17 18:49:31.204636"], ["updated_at", "2018-08-17 18:49:31.204636"], ["username", "tester"], ["name", "test user"]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-08-17 18:49:31.207916"], ["last_sign_in_at", "2018-08-17 18:49:31.207916"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-08-17 18:49:31.208738"], ["id", 3]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 20:49:31 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:3
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+  Rendered pages/_navbar.html.erb (0.8ms)
+Completed 200 OK in 124ms (Views: 120.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2018-08-17 20:49:37 +0200
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:7
+  [1m[36mTweet Load (1.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:22
+  Rendered tweets/index.html.erb within layouts/application (14.1ms)
+  Rendered pages/_navbar.html.erb (0.9ms)
+Completed 200 OK in 147ms (Views: 137.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/tweets/new" for 127.0.0.1 at 2018-08-17 20:49:39 +0200
+Processing by TweetsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (6.7ms)
+  Rendered tweets/new.html.erb within layouts/application (11.2ms)
+  Rendered pages/_navbar.html.erb (0.8ms)
+Completed 200 OK in 167ms (Views: 138.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/tweets" for 127.0.0.1 at 2018-08-17 20:49:47 +0200
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"//7YCwGS7bIm8Pm8WboqYZpl/+bpLOSNZOen23yO6rkU5sWLkwkjlh3176IbdzWXgIO9S33G6yWIZj3X4CxHqA==", "tweet"=>{"content"=>"tweetje van test"}, "commit"=>"Create Tweet"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:26
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("user_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["content", "tweetje van test"], ["created_at", "2018-08-17 18:49:47.554825"], ["updated_at", "2018-08-17 18:49:47.554825"]]
+  ↳ app/controllers/tweets_controller.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:26
+Redirected to http://localhost:3000/tweets/1
+Completed 302 Found in 11ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/tweets/1" for 127.0.0.1 at 2018-08-17 20:49:47 +0200
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:10
+  Rendering tweets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/show.html.erb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/show.html.erb:11
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3[0m  [["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/tweets/show.html.erb:16
+  Rendered tweets/show.html.erb within layouts/application (13.0ms)
+  Rendered pages/_navbar.html.erb (0.7ms)
+Completed 200 OK in 139ms (Views: 130.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/tester" for 127.0.0.1 at 2018-08-17 20:49:54 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"username"=>"tester"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+DEPRECATION WARNING: Setting custom parent classes is deprecated and will be removed in future versions. (called from parent_class_name at /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/acts_as_follower-c5ac7b9601c4/lib/acts_as_follower/follower_lib.rb:10)
+DEPRECATION WARNING: Setting custom parent classes is deprecated and will be removed in future versions. (called from parent_class_name at /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/acts_as_follower-c5ac7b9601c4/lib/acts_as_follower/follower_lib.rb:10)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "follows" WHERE "follows"."blocked" = $1 AND "follows"."follower_id" = $2 AND "follows"."follower_type" = $3 AND "follows"."followable_id" = $4 AND "follows"."followable_type" = $5[0m  [["blocked", false], ["follower_id", 3], ["follower_type", "User"], ["followable_id", 3], ["followable_type", "User"]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/acts_as_follower-c5ac7b9601c4/lib/acts_as_follower/follower.rb:20
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:26
+  Rendered users/show.html.erb within layouts/application (20.3ms)
+  Rendered pages/_navbar.html.erb (0.9ms)
+Completed 200 OK in 175ms (Views: 159.5ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/users/tester/follow" for 127.0.0.1 at 2018-08-17 20:49:56 +0200
+Processing by FollowsController#create as HTML
+  Parameters: {"authenticity_token"=>"91YUqWfbkw4UdkJ+F+6d6K27Akw2i/Sk9Pl4ulQArS5c1SGn/ylmOX0BAQkdXukPxsx3FZeDjwKTZck9kR5MOA==", "username"=>"tester"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/follows_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/follows_controller.rb:6
+  [1m[36mFollow Create (1.1ms)[0m  [1m[32mINSERT INTO "follows" ("followable_type", "followable_id", "follower_type", "follower_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["followable_type", "User"], ["followable_id", 3], ["follower_type", "User"], ["follower_id", 3], ["created_at", "2018-08-17 18:49:56.375519"], ["updated_at", "2018-08-17 18:49:56.375519"]]
+  ↳ app/controllers/follows_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/follows_controller.rb:6
+Redirected to http://localhost:3000/users/tester
+Completed 302 Found in 17ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/tester" for 127.0.0.1 at 2018-08-17 20:49:56 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"username"=>"tester"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+DEPRECATION WARNING: Setting custom parent classes is deprecated and will be removed in future versions. (called from parent_class_name at /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/acts_as_follower-c5ac7b9601c4/lib/acts_as_follower/follower_lib.rb:10)
+DEPRECATION WARNING: Setting custom parent classes is deprecated and will be removed in future versions. (called from parent_class_name at /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/acts_as_follower-c5ac7b9601c4/lib/acts_as_follower/follower_lib.rb:10)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "follows" WHERE "follows"."blocked" = $1 AND "follows"."follower_id" = $2 AND "follows"."follower_type" = $3 AND "follows"."followable_id" = $4 AND "follows"."followable_type" = $5[0m  [["blocked", false], ["follower_id", 3], ["follower_type", "User"], ["followable_id", 3], ["followable_type", "User"]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/acts_as_follower-c5ac7b9601c4/lib/acts_as_follower/follower.rb:20
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:26
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+  Rendered pages/_navbar.html.erb (0.7ms)
+Completed 200 OK in 142ms (Views: 135.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tweets/1" for 127.0.0.1 at 2018-08-17 20:49:58 +0200
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:10
+  Rendering tweets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/show.html.erb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/show.html.erb:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3[0m  [["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/tweets/show.html.erb:16
+  Rendered tweets/show.html.erb within layouts/application (7.5ms)
+  Rendered pages/_navbar.html.erb (0.7ms)
+Completed 200 OK in 147ms (Views: 130.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2018-08-17 20:50:02 +0200
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:7
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3[0m  [["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 3], ["voter_type", "User"], ["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/tweets/index.html.erb:33
+  Rendered tweets/index.html.erb within layouts/application (9.4ms)
+  Rendered pages/_navbar.html.erb (0.7ms)
+Completed 200 OK in 153ms (Views: 145.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/tweets/1/vote" for 127.0.0.1 at 2018-08-17 20:50:04 +0200
+Processing by VotesController#create as HTML
+  Parameters: {"authenticity_token"=>"/dksiUA+rL5eTsbJaaoV0diUZu6a9JBfM2SzLSA/9D9WWhmH2MxZiTc5hb5jGmE2s+MTtzv86/lU+AKq5SEVKQ==", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/votes_controller.rb:5
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."voter_id" = $3 AND "votes"."vote_scope" IS NULL AND "votes"."voter_type" = $4[0m  [["votable_id", 1], ["votable_type", "Tweet"], ["voter_id", 3], ["voter_type", "User"]]
+  ↳ app/controllers/votes_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/votes_controller.rb:6
+  [1m[36mActsAsVotable::Vote Create (0.9ms)[0m  [1m[32mINSERT INTO "votes" ("votable_type", "votable_id", "voter_type", "voter_id", "vote_flag", "vote_weight", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["votable_type", "Tweet"], ["votable_id", 1], ["voter_type", "User"], ["voter_id", 3], ["vote_flag", true], ["vote_weight", 1], ["created_at", "2018-08-17 18:50:04.845487"], ["updated_at", "2018-08-17 18:50:04.845487"]]
+  ↳ app/controllers/votes_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/votes_controller.rb:6
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 23ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2018-08-17 20:50:04 +0200
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:7
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3[0m  [["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 3], ["voter_type", "User"], ["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/tweets/index.html.erb:33
+  Rendered tweets/index.html.erb within layouts/application (8.6ms)
+  Rendered pages/_navbar.html.erb (0.7ms)
+Completed 200 OK in 151ms (Views: 146.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/feed" for 127.0.0.1 at 2018-08-17 20:50:08 +0200
+Processing by FeedController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mFollow Load (0.8ms)[0m  [1m[34mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = $1 AND "follows"."follower_type" = $2 AND "follows"."blocked" = $3[0m  [["follower_id", 3], ["follower_type", "User"], ["blocked", false]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/acts_as_follower-c5ac7b9601c4/lib/acts_as_follower/follower.rb:63
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ /Users/martin/.rvm/gems/ruby-2.5.1/bundler/gems/acts_as_follower-c5ac7b9601c4/lib/acts_as_follower/follower.rb:63
+  Rendering feed/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/feed/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/feed/show.html.erb:20
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3[0m  [["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/feed/show.html.erb:27
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 3], ["voter_type", "User"], ["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/feed/show.html.erb:29
+  Rendered feed/show.html.erb within layouts/application (8.9ms)
+  Rendered pages/_navbar.html.erb (0.9ms)
+Completed 200 OK in 159ms (Views: 141.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2018-08-17 20:50:11 +0200
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:7
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:24
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3[0m  [["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/tweets/index.html.erb:31
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 3], ["voter_type", "User"], ["votable_id", 1], ["votable_type", "Tweet"], ["vote_flag", true]]
+  ↳ app/views/tweets/index.html.erb:33
+  Rendered tweets/index.html.erb within layouts/application (10.8ms)
+  Rendered pages/_navbar.html.erb (0.8ms)
+Completed 200 OK in 158ms (Views: 149.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-08-17 20:50:13 +0200
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/_navbar.html.erb:16
+  Rendered pages/_navbar.html.erb (2.3ms)
+Completed 200 OK in 129ms (Views: 126.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 20:50:13 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:3
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+  Rendered pages/_navbar.html.erb (0.8ms)
+Completed 200 OK in 130ms (Views: 125.4ms | ActiveRecord: 0.4ms)
+
+

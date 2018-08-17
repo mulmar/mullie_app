@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2018_08_15_133454) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
     t.string "resource_type"
-    t.integer "resource_id"
+    t.bigint "resource_id"
     t.string "author_type"
-    t.integer "author_id"
+    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
@@ -28,9 +31,9 @@ ActiveRecord::Schema.define(version: 2018_08_15_133454) do
 
   create_table "follows", force: :cascade do |t|
     t.string "followable_type", null: false
-    t.integer "followable_id", null: false
+    t.bigint "followable_id", null: false
     t.string "follower_type", null: false
-    t.integer "follower_id", null: false
+    t.bigint "follower_id", null: false
     t.boolean "blocked", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_133454) do
   end
 
   create_table "tweets", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -73,7 +76,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_133454) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  create_table "votes", force: :cascade do |t|
+  create_table "votes", id: :serial, force: :cascade do |t|
     t.string "votable_type"
     t.integer "votable_id"
     t.string "voter_type"
@@ -87,4 +90,5 @@ ActiveRecord::Schema.define(version: 2018_08_15_133454) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
+  add_foreign_key "tweets", "users"
 end

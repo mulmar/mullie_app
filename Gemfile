@@ -24,7 +24,7 @@ gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'sqlite3'
+  gem 'pg', '~> 0.18'
 end
 
 group :development do
