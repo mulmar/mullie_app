@@ -13,7 +13,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
-gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'devise', '~> 4.7'
 gem 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
